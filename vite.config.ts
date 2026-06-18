@@ -36,7 +36,9 @@ export default defineConfig({
         manualChunks: {
           // Split dependencies into separate chunks for better caching
           three: ["three"],
-          "react-vendor": ["react", "react-dom"],
+          react: ["react", "react-dom"],
+          "camera-controls": ["camera-controls"],
+          gsap: ["gsap"],
         },
       },
     },
