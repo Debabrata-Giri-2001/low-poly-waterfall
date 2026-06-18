@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.chelsea-market-regular {
+  font-family: "Chelsea Market", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.world_view {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+/* .ts-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+} */
+
+html.is-started {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.ts-canvas,
+.ts-loader-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ts-loader-canvas {
+  z-index: 10;
+}
+
+.ts-loader-percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 3rem;
+  font-family: "Chelsea Market", system-ui;
+}
+
+
+.ts-loader-click {
+  position: absolute;
+  left: 50%;
+  top: calc(90%);
+  z-index: 11;
+
+  transform: translateX(-50%);
+
+  color: white;
+  font-family: "Chelsea Market", system-ui;
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* --- UI OVERLAY STYLES --- */
+
+.ui-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5; /* Sits above the 3D canvas, but behind the loader! */
+  
+  /* CRITICAL: Lets you click "through" the invisible div to drag the 3D scene */
+  pointer-events: none; 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  
+  font-family: "Chelsea Market", system-ui;
+  color: white;
+}
+
+/* Top Section */
+.ui-top {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.project-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 1px;
+}
+
+.project-author {
+  font-size: 1.2rem;
+  color: #25af81; /* Matching your loader's green accent color */
+}
+
+/* Bottom Section */
+.ui-bottom {
+  display: flex;
+  justify-content: right; 
+}
+
+.social-links {
+  display: flex;
+  gap: 5px;
+}
+
+.social-links a {
+  /* CRITICAL: Turns clicking back on for the buttons only */
+  pointer-events: auto; 
+  
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding: 0.4rem 0.2rem;
+  
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ui-layer {
+    padding: 1rem 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.8rem;
+  }
+  
+  .project-author {
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+    flex-wrap: wrap; /* Allows buttons to stack if screen is too thin */
+  }
+  
+  .social-links a {
+    font-size: 0.9rem;
+    padding: 0.0rem 0.2rem;
+  }
+}
