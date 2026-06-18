@@ -18,8 +18,8 @@ export default defineConfig({
 
   // Build optimizations
   build: {
-    // Reduce chunk size
-    minify: "terser",
+    // Changed from 'terser' to 'esbuild' for faster builds without extra dependencies
+    minify: "esbuild", 
 
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
