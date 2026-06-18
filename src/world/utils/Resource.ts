@@ -112,7 +112,6 @@ export class ResourceFile {
       ],
       progressCallback,
     );
-    console.log("Loaded resources:", resources);
     return resources;
   }
 }

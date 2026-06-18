@@ -86,10 +86,7 @@ private loadRocksAndExtractData(_config: ResourceConfig) {
             radius: radius,
           });
           
-          console.log(`✅ Rock: pos(${worldPos.x.toFixed(2)}, ${worldPos.y.toFixed(2)}, ${worldPos.z.toFixed(2)}), radius=${radius.toFixed(3)}`);
-        } else if (radius > MAX_ROCK_RADIUS) {
-          console.log(`❌ Skipped huge rock: radius=${radius.toFixed(3)}`);
-        }
+        } else if (radius > MAX_ROCK_RADIUS) {}
       }
     });
 
