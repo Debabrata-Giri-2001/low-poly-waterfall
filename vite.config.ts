@@ -36,7 +36,6 @@ export default defineConfig({
         manualChunks: {
           // Split dependencies into separate chunks for better caching
           three: ["three"],
-          rapier: ["@react-three/rapier"],
           "react-vendor": ["react", "react-dom"],
         },
       },
